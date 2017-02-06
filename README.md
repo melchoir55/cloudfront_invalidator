@@ -15,7 +15,7 @@ Change the placeholders `<replace with cloudfront distro id>` in the file `inval
 ```
 after_deploy:
 - pip install --user boto
-- python cloudfront_invalidation.py -a $AWS_ACCESS_KEY -s $AWS_SECRET_KEY -b $TRAVIS_BRANCH
+- python invalidator.py -a $AWS_ACCESS_KEY -s $AWS_SECRET_KEY -b $TRAVIS_BRANCH
 ```
 
 In the above example, one is required to set the `AWS_ACCESS_KEY` and `AWS_SECRET_KEY` environment variables. `TRAVIS_BRANCH` is always available.
